@@ -1,6 +1,7 @@
 package question2;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
+import java.util.Scanner; 
 
 
 class Node { 
@@ -121,15 +122,19 @@ class BinarySearchTree
 
  public static void main(String[] args) { 
      BinarySearchTree tree = new BinarySearchTree(); 
- 
-     tree.insert(15); 
-     tree.insert(10); 
-     tree.insert(20); 
-     tree.insert(8); 
-     tree.insert(12); 
-     tree.insert(16); 
-     tree.insert(25); 
+     try(Scanner sc = new Scanner(System.in)){
+    	 System.out.println("Sum = ");
+    	 int sum = sc.nextInt();
+     
+	     tree.insert(40); 
+	     tree.insert(20); 
+	     tree.insert(60); 
+	     tree.insert(10); 
+	     tree.insert(30); 
+	     tree.insert(50); 
+	     tree.insert(70); 
 
-     tree.isPairPresent(tree.root, 33); 
+	     tree.isPairPresent(tree.root, sum); 
      } 
+ }
 } 
